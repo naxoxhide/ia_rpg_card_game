@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tripleS: Dimension Portal - Onboarding</title>
+    <!-- Google Fonts for Retro Pixel Art Styles -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Retro CRT TV Effect Overlay -->
+    <div class="crt-overlay"></div>
+    <div class="scanlines"></div>
+
+    <!-- WebGL Background Canvas -->
+    <canvas id="gl-canvas"></canvas>
+
+    <!-- Main Game Container -->
+    <div id="game-container">
+        
+        <!-- ================= START MENU SCREEN ================= -->
+        <div id="menu-screen" class="screen active">
+            <div class="game-header">
+                <h1 class="glow-text title-glitch">tripleS</h1>
+                <h2 class="subtitle">DIMENSION PORTAL</h2>
+            </div>
+            
+            <div class="menu-options">
+                <button class="menu-btn" id="start-btn" data-sound="select">INICIAR PORTAL</button>
+                <button class="menu-btn" id="settings-btn" data-sound="hover">CONFIGURACIÓN</button>
+                <button class="menu-btn" id="exit-btn" data-sound="error">SALIR</button>
+            </div>
+
+            <div class="menu-footer">
+                <p>COSMIC ENCOUNTER ENGINE v1.0.0</p>
+            </div>
+        </div>
+
+        <!-- ================= INTRO SCENE (BLACK SCENE) ================= -->
+        <div id="intro-screen" class="screen">
+            <div class="dialogue-container">
+                <p id="dialogue-text" class="pixel-text"></p>
+                <div class="dialogue-prompt">
+                    <span class="blink-arrow">▼</span> Haz clic o pulsa ESPACIO para avanzar
+                </div>
+            </div>
+        </div>
+
+        <!-- ================= QUESTIONNAIRE SCREEN ================= -->
+        <div id="quiz-screen" class="screen">
+            <!-- Top status bar -->
+            <div class="quiz-header">
+                <div class="progress-container">
+                    <span>ESTABILIDAD DEL PORTAL:</span>
+                    <div class="progress-bar">
+                        <div id="progress-fill" style="width: 10%;"></div>
+                    </div>
+                    <span id="progress-percent">10%</span>
+                </div>
+            </div>
+
+            <!-- Quiz Layout: Bottom Question and Side Options -->
+            <div class="quiz-body">
+                <div class="options-sidebar" id="options-container">
+                    <!-- Options will be injected here dynamically -->
+                </div>
+                
+                <div class="question-box">
+                    <div class="question-number" id="question-num">PREGUNTA 1/10</div>
+                    <p class="question-text" id="question-text">¿Cuál es tu trasfondo antes de unirte a esta gran aventura?</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ================= TIE BREAKER SELECTION ================= -->
+        <div id="tie-screen" class="screen">
+            <div class="tie-header">
+                <h2 class="glow-text text-danger">COLISIÓN DIMENSIONAL</h2>
+                <p class="pixel-text text-center">¡El portal ha entrado en un estado de superposición cuántica!</p>
+                <p class="tie-subtitle" id="tie-message">Bueno! Creo que las dimensiones colidan, debes elegir con quien seguir:</p>
+            </div>
+            
+            <div class="tie-grid" id="tie-options-container">
+                <!-- Tied options buttons will be injected here -->
+            </div>
+        </div>
+
+        <!-- ================= RESULT SCREEN ================= -->
+        <div id="result-screen" class="screen">
+            <div class="result-header">
+                <p class="intro-result-text">Muy bien... tu acompañante será</p>
+                <h1 class="glow-text text-highlight" id="result-name">SEO YU-MIN</h1>
+                <p class="result-code" id="result-id">S1</p>
+            </div>
+
+            <!-- Future Pixel Art Profile Image Frame -->
+            <div class="profile-card">
+                <div class="pixel-border-outer">
+                    <div class="pixel-border-inner">
+                        <div class="profile-image-placeholder">
+                            <div class="glitch-scanner"></div>
+                            <!-- Static placeholder styling, ready for future image -->
+                            <div class="placeholder-icon">🤖</div>
+                            <div class="placeholder-text">PIXEL ART SYNCING...</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="result-details">
+                <p id="result-details-text">Una aventurera excepcional preparada para cruzar el Cosmos.</p>
+            </div>
+
+            <div class="result-actions">
+                <button class="menu-btn secondary" id="restart-btn">REINICIAR</button>
+                <button class="menu-btn" id="finish-btn">SALIR DEL JUEGO</button>
+            </div>
+        </div>
+
+        <!-- ================= SETTINGS MODAL ================= -->
+        <div id="settings-modal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="glow-text">CONFIGURACIÓN</h3>
+                </div>
+                <div class="modal-body">
+                    <div class="setting-row">
+                        <label for="sound-toggle">EFECTOS DE SONIDO:</label>
+                        <button class="toggle-btn active" id="sound-toggle">ON</button>
+                    </div>
+                    <div class="setting-row">
+                        <label for="shader-quality">CALIDAD DEL PORTAL:</label>
+                        <select id="shader-quality" class="pixel-select">
+                            <option value="high" selected>ALTA (FX COMPLETO)</option>
+                            <option value="medium">MEDIA</option>
+                            <option value="low">BAJA (ESTÁTICA)</option>
+                        </select>
+                    </div>
+                    <div class="setting-info">
+                        <p>Diseño WebGL de alta fidelidad. Utilice la calidad media/baja si nota ralentizaciones.</p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="menu-btn" id="close-settings-btn">CERRAR</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- JS Logic -->
+    <script src="game.js"></script>
+</body>
+</html>

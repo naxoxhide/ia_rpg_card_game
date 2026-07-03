@@ -4,6 +4,24 @@ Welcome to the **tripleS: Dimension Portal** project, an immersive web-based idl
 
 ---
 
+## 📺 Gameplay & Visuals
+
+Here is a preview of the interactive onboarding gates, settings panel, and character results screen:
+
+### Gameplay Recording (Simulation)
+![Gameplay Preview](assets/screenshots/gameplay_recording.webp)
+
+### Key Screens
+| Main Menu | Questionnaire |
+|---|---|
+| ![Main Menu](assets/screenshots/main_menu.png) | ![Questionnaire](assets/screenshots/quiz_scene.png) |
+
+| Tie-Breaker (Dimensional Collision) | Character Synced |
+|---|---|
+| ![Tie-Breaker](assets/screenshots/tie_breaker.png) | ![Final Result](assets/screenshots/final_result.png) |
+
+---
+
 ## 🔮 Core Game Concept
 The game combines RPG progression mechanics with card collection elements:
 - **Character Selection Questionnaire**: An interactive intro sequence that queries the player's preferences and background to assign their starting tripleS companion.

@@ -8,9 +8,6 @@ Welcome to the **tripleS: Dimension Portal** project, an immersive web-based idl
 
 Here is a preview of the interactive onboarding gates, settings panel, and character results screen:
 
-### Gameplay Recording (Simulation)
-![Gameplay Preview](assets/screenshots/gameplay_recording.webp)
-
 ### Key Screens
 | Main Menu | Questionnaire |
 |---|---|

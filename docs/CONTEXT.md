@@ -36,3 +36,11 @@ This file is a living ledger of the development history, architecture, and curre
     - Set the overlay scanner line `z-index` to sweep over the rendered portrait.
     - Associated NaKyoung (S7) member profile with `assets/portraits/NaKyoung.png`.
     - Executed temporary testing loop mapping NaKyoung's portrait to all members to verify card dimensioning, then restored default placeholder fallbacks.
+  - Local Workflow Utilities (July 2026):
+    - Created local `commands/` directory in the project root.
+    - Removed old `.sh` deploy scripts.
+    - Added `code-quality.md` outlining the verification workflow to audit code quality, shader standards, and audio context practices using Context7.
+  - Context7 Setup (July 2026):
+    - Initialized Context7 documentation integration via `npx ctx7 setup`.
+    - Authenticated via device OAuth flow.
+    - Configured Context7 MCP server and rules for Antigravity, Claude Code, Cursor, OpenCode, Codex, and Gemini CLI.

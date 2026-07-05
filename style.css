@@ -709,3 +709,33 @@ html, body {
     50% { top: 100%; }
     100% { top: 0%; }
 }
+
+/* Dimensional CRT Monitor Glitches (No camera shake, purely visual image tearing) */
+.glitch-effect {
+    animation: crt-h-sync 0.22s steps(2) infinite;
+    filter: contrast(1.4) saturate(1.25) hue-rotate(5deg);
+}
+
+.glitch-effect .glow-text {
+    text-shadow: -3px 0 #ff007f, 3px 0 #00f0ff !important;
+    animation: crt-text-aberration 0.1s infinite;
+}
+
+@keyframes crt-h-sync {
+    0% { clip-path: inset(0 0 0 0); transform: translateX(0); }
+    15% { clip-path: inset(18% 0 77% 0); transform: translateX(-6px); }
+    17% { clip-path: inset(0 0 0 0); transform: translateX(0); }
+    40% { clip-path: inset(62% 0 31% 0); transform: translateX(8px); }
+    43% { clip-path: inset(0 0 0 0); transform: translateX(0); }
+    65% { clip-path: inset(45% 0 52% 0); transform: translateX(-4px); }
+    68% { clip-path: inset(0 0 0 0); transform: translateX(0); }
+    85% { clip-path: inset(5% 0 91% 0); transform: translateX(5px); }
+    87% { clip-path: inset(0 0 0 0); transform: translateX(0); }
+}
+
+@keyframes crt-text-aberration {
+    0% { text-shadow: -3px 0 #ff007f, 3px 0 #00f0ff; }
+    33% { text-shadow: 3px -1px #ff007f, -3px 1px #00f0ff; }
+    66% { text-shadow: -1px 3px #ff007f, 1px -3px #00f0ff; }
+    100% { text-shadow: -3px 0 #ff007f, 3px 0 #00f0ff; }
+}

@@ -14,3 +14,20 @@ This file is a living ledger of the development history, architecture, and curre
   - Synthetic retro sound generator utilizing the browser's native Web Audio API oscillators.
   - CRT retro overlay styles (vignette, flickering, scanlines) using HSL color mapping.
   - Profile card layout with a future pixel art sync scanner frame.
+  - Created asset directories `assets/portraits/` and `assets/ui/` for future integration of custom graphics and member portraits.
+  - Setup project-scoped AI configuration:
+    - Initialized the development ledger `docs/CONTEXT.md` to track architectural state.
+    - Initialized `.agents/AGENTS.md` defining retro design constraints, Web Audio API synthesis guidelines, and WebGL context fallbacks.
+    - Integrated specialized agent skills (`game-engine`, `game-development`, and `game-ui-design`) under `.agents/skills/`.
+  - Nether Portal & CRT Glitch Upgrades (July 2026):
+    - Upgraded WebGL fragment shader to replicate Minecraft Nether Portal aesthetics with flowing vertical purple/magenta waves.
+    - Implemented a purely visual, silent dimensional glitch effect:
+      - Removed electrical sound crackles, silencing the glitch transition.
+      - Replaced camera screen-shake movement with a horizontal CRT sync-slip shearing animation using `clip-path` splits on `.glitch-effect` containers.
+      - Integrated real-time chromatic aberration (RGB color splitting) in WebGL by offset sampling of coordinates during glitches.
+      - Added dynamic CRT text-shadow RGB channel splitting on headers.
+  - S24 Integration & Questionnaire Update (July 2026):
+    - Added the newly revealed member JiYeon (S24) to the core member database (`MEMBERS`).
+    - Expanded the onboarding questionnaire from 10 to 12 questions based on updated character lore mappings.
+    - Updated `loadQuestion()` in `game.js` to support 5 options (Option E) dynamically, mapping answers to JiYeon (S24) scores.
+    - Verified options rendering and selection logic yielding S24 results on successful completion.

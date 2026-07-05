@@ -45,6 +45,7 @@ The repository contains specialized **Agent Customization Skills** designed to e
 ### Integrated Agent Skills (`.agents/skills/`)
 1. **[`game-engine`](file:///.agents/skills/game-engine/SKILL.md)**: Exposes advanced reference documentation, algorithms (noise, collisions, math), and baseline templates for HTML5 Canvas and raw WebGL rendering loops.
 2. **[`game-development`](file:///.agents/skills/game-development/SKILL.md)**: Coordinates gaming frameworks, design principles, multiplayer systems, audio synthesis, and sub-genre guidelines (2D, 3D, mobile, and web).
+3. **[`game-ui-design`](file:///.agents/skills/game-ui-design/SKILL.md)**: Governs visual interface standards, controller bindings, layout layouts (HUDs), diegetic components, and esports readability rules.
 
 These skills are checked by the agent at runtime to align with the workspace's architecture.
 

@@ -22,7 +22,8 @@ const MEMBERS = {
     'S16': { name: 'Mayu', id: 'S16', desc: 'Adorable y carismática integrante japonesa con un tierno "¡Bye byekinnnn!" que cautiva a los rivales.' },
     'S17': { name: 'Lynn', id: 'S17', desc: 'Bailarina letal que aporta una técnica pulida de danza contemporánea al campo de batalla.' },
     'S18': { name: 'Joobin', id: 'S18', desc: 'Centro visual de gran encanto. Su misterio dimensional añade elegancia al mazo.' },
-    'S23': { name: 'SeoAh', id: 'S23', desc: 'La rapera con actitud casual de "Yoooo bro!" que sorprende cantando Happy Birthday en momentos inesperados.' }
+    'S23': { name: 'SeoAh', id: 'S23', desc: 'La rapera con actitud casual de "Yoooo bro!" que sorprende cantando Happy Birthday en momentos inesperados.' },
+    'S24': { name: 'JiYeon', id: 'S24', desc: 'El as bajo la manga y pieza final de tripleS. Su expresividad y maestría en danza contemporánea completan el grupo.' }
 };
 
 // Subunit Definitions (Group mapping for Question 7)
@@ -36,17 +37,18 @@ const SUBUNITS = {
 // Questions Database
 const QUESTIONS = [
     {
-        num: "PREGUNTA 1/10",
-        text: "¿Cuál es tu trasfondo antes de unirte a esta gran aventura (Dimensión)?",
+        num: "PREGUNTA 1/12",
+        text: "¿Cuál es tu trasfondo antes de unirte a esta gran aventura (Dimension)?",
         options: [
             { text: "Era una estudiante común y corriente preparándome para los exámenes, sin experiencia previa.", keys: ['S1'] },
-            { text: "He entrenado en casi todas las grandes agencias (¡SM, JYP, YG, FNC!), acumulando experiencia legendaria.", keys: ['S3'] },
-            { text: "Ya era toda una profesional con años de experiencia en televisión infantil y actuación.", keys: ['S4'] },
-            { text: "Vengo de una familia con genes musicales súper talentosos y reconocidos.", keys: ['S7'] }
+            { text: "He entrenado en casi todas las grandes agencias, acumulando experiencia legendaria.", keys: ['S3'] },
+            { text: "Ya era toda una profesional con años de experiencia en televisión infantil.", keys: ['S4'] },
+            { text: "Vengo de una familia con genes musicales súper talentosos y reconocidos.", keys: ['S7'] },
+            { text: "Fui el secreto mejor guardado; el as bajo la manga que aparece al final para completar el equipo.", keys: ['S24'] }
         ]
     },
     {
-        num: "PREGUNTA 2/10",
+        num: "PREGUNTA 2/12",
         text: "Tu comida de confort absoluta para recuperar estamina en el juego es:",
         options: [
             { text: "Un plato gigante de Malatang ardiente o Tteokbokki picante.", keys: ['S15', 'S12'] },
@@ -56,7 +58,7 @@ const QUESTIONS = [
         ]
     },
     {
-        num: "PREGUNTA 3/10",
+        num: "PREGUNTA 3/12",
         text: "Te quedas atrapado en un mapa difícil (o en un episodio de Badge War). ¿Cuál es tu estrategia?",
         options: [
             { text: "Analizar la situación fríamente con mi intelecto y sobrevivir con lógica.", keys: ['S5'] },
@@ -66,7 +68,7 @@ const QUESTIONS = [
         ]
     },
     {
-        num: "PREGUNTA 4/10",
+        num: "PREGUNTA 4/12",
         text: "Entras victorioso a la sala del jefe final. ¿Cuál es tu frase de batalla?",
         options: [
             { text: '"OMG, I\'m so pretty!" (¡Por Dios, soy tan hermosa!).', keys: ['S15'] },
@@ -76,27 +78,27 @@ const QUESTIONS = [
         ]
     },
     {
-        num: "PREGUNTA 5/10",
+        num: "PREGUNTA 5/12",
         text: "¿Qué rol prefieres tomar dentro de la formación de tu mazo?",
         options: [
             { text: "Producir las pistas, escribir las habilidades de las cartas y dirigir la estrategia.", keys: ['S14'] },
-            { text: "Ser la fuerza de ataque principal con ráfagas de hip-hop o ballet.", keys: ['S2', 'S11', 'S17'] },
+            { text: "Ser la fuerza de ataque principal con ráfagas de hip-hop, ballet o danza moderna.", keys: ['S2', 'S17', 'S24'] },
             { text: "Ser el centro visual indiscutible que acapara todas las miradas.", keys: ['S5', 'S18'] },
             { text: "El comodín ruidoso y energético que buffea el ataque de todo el equipo.", keys: ['S13', 'S6'] }
         ]
     },
     {
-        num: "PREGUNTA 6/10",
+        num: "PREGUNTA 6/12",
         text: "¿Cómo reaccionas cuando el juego te lanza un evento sorpresa o un susto?",
         options: [
             { text: "Mis expresiones faciales son tan exageradas que mi cara se vuelve un meme instantáneo.", keys: ['S3'] },
             { text: "Ni me entero... tengo la habilidad de quedarme dormida en cualquier esquina del mapa.", keys: ['S2'] },
             { text: "Me asusto súper fácil y salgo corriendo, pero sigo siendo adorable.", keys: ['S9'] },
-            { text: "Mantengo mi cara de gato seria y niego haber sido yo quien activó la trampa.", keys: ['S7'] }
+            { text: "Mantengo una expresión seria, elegante y misteriosa para que nadie note mi sorpresa.", keys: ['S7', 'S24'] }
         ]
     },
     {
-        num: "PREGUNTA 7/10",
+        num: "PREGUNTA 7/12",
         text: "Tu estilo estético ideal para el diseño de tus cartas (Objekts) iniciales sería:",
         options: [
             { text: "Estilo callejero, urbano, hip-hop y lleno de swag.", keys: ['S11', 'SUBUNIT_VV'] },
@@ -106,17 +108,17 @@ const QUESTIONS = [
         ]
     },
     {
-        num: "PREGUNTA 8/10",
+        num: "PREGUNTA 8/12",
         text: "Si tuvieras un superpoder pasivo en el juego, ¿cuál elegirías?",
         options: [
             { text: '"Nací con estos músculos": Fuerza física natural sin necesidad de entrenar tanto.', keys: ['S13'] },
             { text: "Adaptabilidad absoluta: Cambiar de rol o sub-unidad en cualquier momento según la misión.", keys: ['S1'] },
-            { text: '"Somos 24 miembros, al menos una de nosotras tiene que poder lograrlo": Suerte matemática por pura cantidad.', keys: ['S5'] },
+            { text: '"El gran final": Multiplicar el daño del mazo cuando se activa la última carta disponible.', keys: ['S24'] },
             { text: "Aura felina: Esquivar ataques enemigos gracias a reflejos rápidos y visuales chic.", keys: ['S7'] }
         ]
     },
     {
-        num: "PREGUNTA 9/10",
+        num: "PREGUNTA 9/12",
         text: "Cuando logras una victoria difícil, ¿cómo celebras con tu equipo?",
         options: [
             { text: "Devorando toda la comida que encuentre en el inventario en un segundo.", keys: ['S5'] },
@@ -126,7 +128,7 @@ const QUESTIONS = [
         ]
     },
     {
-        num: "PREGUNTA 10/10",
+        num: "PREGUNTA 10/12",
         text: "¿Qué tipo de vibra quieres que transmita el líder de tu mazo?",
         options: [
             { text: "Una vibra hogareña, carismática y un poco torpe pero muy confiable.", keys: ['S1'] },
@@ -134,15 +136,41 @@ const QUESTIONS = [
             { text: "Energía caótica pura, risas fuertes y momentos icónicos en cada turno.", keys: ['S13', 'S6'] },
             { text: "Un equilibrio perfecto de timidez fuera del escenario y un talento letal en combate.", keys: ['S7', 'S9'] }
         ]
+    },
+    {
+        num: "PREGUNTA 11/12",
+        text: "¿Cómo prefieres hacer tu entrada triunfal en el campo de batalla?",
+        options: [
+            { text: "Desde el primer segundo, abriendo el camino y guiando a los que vienen detrás.", keys: ['S1'] },
+            { text: "Justo en el medio del caos, rompiendo la tensión con un giro inesperado.", keys: ['S13', 'S7'] },
+            { text: "En el momento cumbre, como la pieza final que cierra el círculo y desata el verdadero poder del grupo.", keys: ['S24'] },
+            { text: "De manera completamente relajada y despreocupada, quizás comiendo un bocadillo o medio dormida hasta que sea mi turno real de actuar.", keys: ['S2', 'S8', 'S12'] }
+        ]
+    },
+    {
+        num: "PREGUNTA 12/12",
+        text: "Si tus ataques tuvieran un efecto visual artístico, ¿cuál elegirías?",
+        options: [
+            { text: "Movimientos fluidos, etéreos y expresivos de danza contemporánea que confunden al rival.", keys: ['S24', 'S17'] },
+            { text: "Ráfagas de luces de neón urbanas con un ritmo de Hip-Hop pesado.", keys: ['S11', 'S2'] },
+            { text: "Destellos mágicos, brillantes y coloridos que curan a los aliados mientras dañan al enemigo.", keys: ['S9', 'S16'] },
+            { text: "Ondas sonoras doradas, pentagramas y partituras musicales que resuenan con fuerza en todo el escenario.", keys: ['S10', 'S14'] }
+        ]
     }
 ];
 
 // Intro Dialogue Sentences
 const INTRO_DIALOGUES = [
-    "Bienvenido!",
-    "Este portal te llevará entre las dimensiones",
-    "Pero antes de iniciar tu viaje, necesito hacerte unas preguntas",
-    "Necesito que seas sincero..."
+    "Recuerdo vagamente... estar llegando al concierto de tripleS...",
+    "De un momento a otro todo se volvió blanco... y ahora estoy aquí.",
+    "Parece que este portal me ha transportado a una dimensión alternativa...",
+    "Escucho una voz en eco hablando a lo lejos...",
+    "Hola extraño, ¿puedes oírme?",
+    "No temas, solo necesito que respondas unas preguntas para poder ayudarte a encontrar a las chicas...",
+    "Ellas se han separado en diferentes dimensiones, con estas preguntas te ayudaré a conectar con una de ellas.",
+    "Tus respuestas definirán la dimensión en la que aparecerás y la primera miembro de tripleS que conocerás.",
+    "¿Estás listo?",
+    "Muy bien, comencemos..."
 ];
 
 // Global Game State
@@ -154,7 +182,8 @@ const state = {
     soundEnabled: true,
     shaderQuality: 'high',
     typingTimer: null,
-    audioCtx: null
+    audioCtx: null,
+    glitchAmount: 0.0
 };
 
 // ==========================================
@@ -172,16 +201,16 @@ function initAudio() {
 function playSound(type) {
     if (!state.soundEnabled) return;
     initAudio();
-    
+
     const ctx = state.audioCtx;
     const osc = ctx.createOscillator();
     const gainNode = ctx.createGain();
-    
+
     osc.connect(gainNode);
     gainNode.connect(ctx.destination);
-    
+
     const now = ctx.currentTime;
-    
+
     switch (type) {
         case 'hover':
             osc.type = 'triangle';
@@ -192,7 +221,7 @@ function playSound(type) {
             osc.start(now);
             osc.stop(now + 0.08);
             break;
-            
+
         case 'select':
             osc.type = 'square';
             osc.frequency.setValueAtTime(587.33, now); // D5
@@ -202,7 +231,7 @@ function playSound(type) {
             osc.start(now);
             osc.stop(now + 0.25);
             break;
-            
+
         case 'type':
             osc.type = 'sine';
             osc.frequency.setValueAtTime(Math.random() * 50 + 120, now);
@@ -211,7 +240,7 @@ function playSound(type) {
             osc.start(now);
             osc.stop(now + 0.02);
             break;
-            
+
         case 'error':
             osc.type = 'sawtooth';
             osc.frequency.setValueAtTime(110, now);
@@ -221,7 +250,7 @@ function playSound(type) {
             osc.start(now);
             osc.stop(now + 0.18);
             break;
-            
+
         case 'success':
             osc.type = 'triangle';
             // Play quick arpeggio
@@ -231,7 +260,7 @@ function playSound(type) {
                 const noteGain = ctx.createGain();
                 noteOsc.connect(noteGain);
                 noteGain.connect(ctx.destination);
-                
+
                 noteOsc.type = 'triangle';
                 noteOsc.frequency.setValueAtTime(freq, now + index * 0.06);
                 noteGain.gain.setValueAtTime(0.05, now + index * 0.06);
@@ -239,6 +268,30 @@ function playSound(type) {
                 noteOsc.start(now + index * 0.06);
                 noteOsc.stop(now + index * 0.06 + 0.2);
             });
+            break;
+
+        case 'glitch':
+            // Synthesize a crackling/distorted short glitch noise
+            osc.type = 'sawtooth';
+            osc.frequency.setValueAtTime(80 + Math.random() * 40, now);
+            osc.frequency.linearRampToValueAtTime(10 + Math.random() * 20, now + 0.15);
+            gainNode.gain.setValueAtTime(0.18, now);
+            gainNode.gain.exponentialRampToValueAtTime(0.001, now + 0.15);
+            osc.start(now);
+            osc.stop(now + 0.15);
+
+            // Second modulator for high frequency click/disconnect sound
+            const clickOsc = ctx.createOscillator();
+            const clickGain = ctx.createGain();
+            clickOsc.connect(clickGain);
+            clickGain.connect(ctx.destination);
+            clickOsc.type = 'triangle';
+            clickOsc.frequency.setValueAtTime(1500, now);
+            clickOsc.frequency.exponentialRampToValueAtTime(100, now + 0.05);
+            clickGain.gain.setValueAtTime(0.04, now);
+            clickGain.gain.exponentialRampToValueAtTime(0.001, now + 0.05);
+            clickOsc.start(now);
+            clickOsc.stop(now + 0.05);
             break;
     }
 }
@@ -263,6 +316,7 @@ const fragmentShaderSource = `
     uniform vec2 u_resolution;
     uniform float u_time;
     uniform float u_quality; // 1.0 = High, 0.5 = Medium, 0.0 = Low
+    uniform float u_glitch; // 0.0 to 1.0 (glitch overlay intensity)
 
     float hash(vec2 p) {
         p = fract(p * vec2(123.34, 456.21));
@@ -302,45 +356,83 @@ const fragmentShaderSource = `
     }
 
     void main() {
+        vec2 uv = gl_FragCoord.xy / u_resolution.xy;
         vec2 p = (gl_FragCoord.xy - 0.5 * u_resolution.xy) / u_resolution.y;
+        float t = u_time * 0.22;
         
-        // Nebula anim speed
-        float t = u_time * 0.04;
+        // 1. Horizontal slice coordinates distortion (Glitch effect)
+        if (u_glitch > 0.05) {
+            float slice = sin(p.y * 40.0 + u_time * 120.0);
+            if (slice > 0.9 - u_glitch * 0.4) {
+                p.x += sin(u_time * 30.0) * 0.18 * u_glitch;
+            }
+            p.y += hash(vec2(floor(p.x * 12.0), u_time)) * 0.06 * u_glitch;
+        }
+
+        // 2. Nether Portal: Vertical flow (Y flowing upwards)
+        vec2 flowCoords = p * vec2(1.6, 0.75); // Vertical stretch
+        flowCoords.y -= t;
         
-        // FBM warp coordinates
-        vec2 q = vec2(0.0);
-        q.x = fbm(p + vec2(t, t * 0.5));
-        q.y = fbm(p + vec2(1.0, t * 0.2));
+        // Horizontal wobble waves
+        flowCoords.x += sin(flowCoords.y * 3.2 + t * 2.5) * 0.16;
         
-        vec2 r = vec2(0.0);
-        r.x = fbm(p + 1.0 * q + vec2(1.7, 9.2) + 0.15 * t);
-        r.y = fbm(p + 1.0 * q + vec2(8.3, 2.8) + 0.126 * t);
+        // Compute waves
+        float f = fbm(flowCoords + fbm(flowCoords + vec2(t * 0.08)));
         
-        float f = fbm(p + r);
+        // Nether Portal Color Scheme (Obsidian frame, dark purple, glowing magenta)
+        vec3 colDark = vec3(0.06, 0.0, 0.10);      // Deep dark base
+        vec3 colPortal = vec3(0.32, 0.0, 0.42);    // Swirl purple
+        vec3 colMagenta = vec3(0.78, 0.0, 0.72);   // Hot glowing magenta
+        vec3 colCyanGlitch = vec3(0.0, 0.85, 0.92); // Glitch neon cyan overlay
         
-        // Deep space palette
-        vec3 color = vec3(0.04, 0.015, 0.08); // Dark cosmic purple
+        vec3 color = vec3(0.0);
         
-        // Add nebula gas colors
-        vec3 colMagenta = vec3(0.45, 0.0, 0.35); // tripleS primary/pink hue
-        vec3 colCyan = vec3(0.0, 0.25, 0.5); // Portal blue hue
-        vec3 colGlow = vec3(0.0, 0.7, 0.7); // Light cyan
+        if (u_glitch > 0.05) {
+            float offset = 0.015 * u_glitch;
+            
+            // Red channel (shift left)
+            vec2 pR = p - vec2(offset, 0.0);
+            vec2 flowR = pR * vec2(1.6, 0.75) - vec2(0.0, t);
+            flowR.x += sin(flowR.y * 3.2 + t * 2.5) * 0.16;
+            float fR = fbm(flowR + fbm(flowR + vec2(t * 0.08)));
+            
+            // Blue channel (shift right)
+            vec2 pB = p + vec2(offset, 0.0);
+            vec2 flowB = pB * vec2(1.6, 0.75) - vec2(0.0, t);
+            flowB.x += sin(flowB.y * 3.2 + t * 2.5) * 0.16;
+            float fB = fbm(flowB + fbm(flowB + vec2(t * 0.08)));
+            
+            // Green channel (center)
+            float fG = f;
+            
+            color.r = mix(colDark.r, colPortal.r, clamp(fR * 2.1, 0.0, 1.0));
+            color.r = mix(color.r, colMagenta.r, clamp((fR - 0.38) * 3.8, 0.0, 1.0));
+            
+            color.g = mix(colDark.g, colPortal.g, clamp(fG * 2.1, 0.0, 1.0));
+            color.g = mix(color.g, colMagenta.g, clamp((fG - 0.38) * 3.8, 0.0, 1.0));
+            
+            color.b = mix(colDark.b, colPortal.b, clamp(fB * 2.1, 0.0, 1.0));
+            color.b = mix(color.b, colMagenta.b, clamp((fB - 0.38) * 3.8, 0.0, 1.0));
+        } else {
+            color = mix(colDark, colPortal, clamp(f * 2.1, 0.0, 1.0));
+            color = mix(color, colMagenta, clamp((f - 0.38) * 3.8, 0.0, 1.0));
+        }
         
-        color = mix(color, colMagenta, clamp(f * f * 3.5, 0.0, 1.0));
-        color = mix(color, colCyan, clamp(length(q), 0.0, 1.0));
-        color = mix(color, colGlow, clamp(r.x * r.x * 2.0, 0.0, 1.0));
-        
-        // Contrast enhancement
-        color = color * (f * 2.0 + 0.35);
-        
-        // Render tiny stars on high quality
-        if (u_quality > 0.8) {
-            float starNoise = hash(floor(p * 90.0));
-            if (starNoise > 0.985) {
-                float blink = sin(u_time * 2.5 + starNoise * 123.0) * 0.5 + 0.5;
-                color += vec3(blink * 0.5);
+        // 3. Glitch color flashing overlay
+        if (u_glitch > 0.1) {
+            float flashNoise = hash(vec2(u_time));
+            if (flashNoise > 0.58) {
+                color = mix(color, colCyanGlitch, u_glitch * 0.75);
+            }
+            if (flashNoise > 0.82) {
+                color = 1.0 - color; // Invert colors
             }
         }
+        
+        // Vignette
+        float vignette = uv.x * uv.y * (1.0 - uv.x) * (1.0 - uv.y);
+        vignette = clamp(pow(16.0 * vignette, 0.28), 0.0, 1.0);
+        color *= vignette;
         
         gl_FragColor = vec4(color, 1.0);
     }
@@ -361,7 +453,7 @@ function createShader(gl, type, source) {
 function initWebGL() {
     const canvas = document.getElementById('gl-canvas');
     gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
-    
+
     if (!gl) {
         console.warn("WebGL not supported. Falling back to background gradient.");
         canvas.style.display = 'none';
@@ -376,12 +468,12 @@ function initWebGL() {
         canvas.style.display = 'none';
         return;
     }
-    
+
     program = gl.createProgram();
     gl.attachShader(program, vs);
     gl.attachShader(program, fs);
     gl.linkProgram(program);
-    
+
     if (!gl.getProgramParameter(program, gl.LINK_STATUS)) {
         console.error("Program linking failed: ", gl.getProgramInfoLog(program));
         return;
@@ -390,25 +482,25 @@ function initWebGL() {
     // Quad geometry (two triangles covering screen)
     const vertices = new Float32Array([
         -1.0, -1.0,
-         1.0, -1.0,
-        -1.0,  1.0,
-        -1.0,  1.0,
-         1.0, -1.0,
-         1.0,  1.0
+        1.0, -1.0,
+        -1.0, 1.0,
+        -1.0, 1.0,
+        1.0, -1.0,
+        1.0, 1.0
     ]);
-    
+
     const buffer = gl.createBuffer();
     gl.bindBuffer(gl.ARRAY_BUFFER, buffer);
     gl.bufferData(gl.ARRAY_BUFFER, vertices, gl.STATIC_DRAW);
-    
+
     const positionLoc = gl.getAttribLocation(program, 'a_position');
     gl.enableVertexAttribArray(positionLoc);
     gl.vertexAttribPointer(positionLoc, 2, gl.FLOAT, false, 0, 0);
-    
+
     startTime = Date.now();
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
-    
+
     // Start render loop
     renderLoop();
 }
@@ -416,19 +508,19 @@ function initWebGL() {
 function resizeCanvas() {
     const canvas = document.getElementById('gl-canvas');
     if (!canvas || !gl) return;
-    
+
     // Handle quality resolution downscaling
     let scale = 1.0;
     if (state.shaderQuality === 'medium') scale = 0.5;
-    
+
     const displayWidth = window.innerWidth;
     const displayHeight = window.innerHeight;
-    
+
     if (canvas.width !== displayWidth * scale || canvas.height !== displayHeight * scale) {
         canvas.width = displayWidth * scale;
         canvas.height = displayHeight * scale;
     }
-    
+
     gl.viewport(0, 0, canvas.width, canvas.height);
 }
 
@@ -443,25 +535,28 @@ function renderLoop() {
     canvas.style.display = 'block';
 
     const elapsed = (Date.now() - startTime) / 1000.0;
-    
+
     gl.clearColor(0.0, 0.0, 0.0, 1.0);
     gl.clear(gl.COLOR_BUFFER_BIT);
-    
+
     gl.useProgram(program);
-    
+
     // Set uniforms
     const resolutionLoc = gl.getUniformLocation(program, 'u_resolution');
     gl.uniform2f(resolutionLoc, gl.canvas.width, gl.canvas.height);
-    
+
     const timeLoc = gl.getUniformLocation(program, 'u_time');
     gl.uniform1f(timeLoc, elapsed);
-    
+
     const qualityLoc = gl.getUniformLocation(program, 'u_quality');
     const qVal = state.shaderQuality === 'high' ? 1.0 : (state.shaderQuality === 'medium' ? 0.5 : 0.0);
     gl.uniform1f(qualityLoc, qVal);
-    
+
+    const glitchLoc = gl.getUniformLocation(program, 'u_glitch');
+    gl.uniform1f(glitchLoc, state.glitchAmount);
+
     gl.drawArrays(gl.TRIANGLES, 0, 6);
-    
+
     animationFrameId = requestAnimationFrame(renderLoop);
 }
 
@@ -471,9 +566,9 @@ function renderLoop() {
 function typeText(element, text, speed = 40, callback) {
     let index = 0;
     element.innerHTML = '';
-    
+
     if (state.typingTimer) clearInterval(state.typingTimer);
-    
+
     state.typingTimer = setInterval(() => {
         if (index < text.length) {
             element.innerHTML += text.charAt(index);
@@ -504,14 +599,14 @@ function transitionTo(screenId) {
     document.querySelectorAll('.screen').forEach(scr => {
         scr.classList.remove('active');
     });
-    
+
     // Show target screen
     const target = document.getElementById(screenId);
     if (target) {
         target.classList.add('active');
         state.currentScreen = screenId;
     }
-    
+
     // Specific setup per screen
     if (screenId === 'intro-screen') {
         runIntroDialogue();
@@ -539,7 +634,7 @@ function resetScores() {
 function runIntroDialogue() {
     const textEl = document.getElementById('dialogue-text');
     const currentText = INTRO_DIALOGUES[state.currentIntroIndex];
-    
+
     typeText(textEl, currentText, 45, () => {
         // Display completed callback (if any)
     });
@@ -548,7 +643,7 @@ function runIntroDialogue() {
 function advanceIntro() {
     const textEl = document.getElementById('dialogue-text');
     const currentText = INTRO_DIALOGUES[state.currentIntroIndex];
-    
+
     if (state.typingTimer) {
         // Skip typewriter effect and show full line
         skipTyping(textEl, currentText);
@@ -571,11 +666,11 @@ function advanceIntro() {
 // ==========================================
 function loadQuestion(index) {
     const qData = QUESTIONS[index];
-    
+
     // Update progress elements
     document.getElementById('question-num').innerText = qData.num;
     document.getElementById('question-text').innerText = qData.text;
-    
+
     const progressPercent = Math.round(((index) / QUESTIONS.length) * 100);
     document.getElementById('progress-fill').style.width = `${progressPercent}%`;
     document.getElementById('progress-percent').innerText = `${progressPercent}%`;
@@ -583,8 +678,8 @@ function loadQuestion(index) {
     // Render options
     const container = document.getElementById('options-container');
     container.innerHTML = '';
-    
-    const letters = ['A', 'B', 'C', 'D'];
+
+    const letters = ['A', 'B', 'C', 'D', 'E'];
     qData.options.forEach((opt, idx) => {
         const btn = document.createElement('button');
         btn.className = 'option-btn';
@@ -592,14 +687,14 @@ function loadQuestion(index) {
             <span class="option-letter">${letters[idx]}</span>
             <span class="option-val">${opt.text}</span>
         `;
-        
+
         btn.addEventListener('mouseenter', () => playSound('hover'));
         btn.addEventListener('click', () => {
             playSound('select');
             applyOptionScores(opt.keys);
             nextQuestion();
         });
-        
+
         container.appendChild(btn);
     });
 }
@@ -634,7 +729,7 @@ function nextQuestion() {
         // End of quiz - update final progress bar
         document.getElementById('progress-fill').style.width = '100%';
         document.getElementById('progress-percent').innerText = '100%';
-        
+
         setTimeout(() => {
             calculateResults();
         }, 300);
@@ -648,7 +743,7 @@ function calculateResults() {
     // Find maximum score value
     let maxScore = -1;
     let winners = [];
-    
+
     Object.entries(state.scores).forEach(([memberId, score]) => {
         if (score > maxScore) {
             maxScore = score;
@@ -657,7 +752,7 @@ function calculateResults() {
             winners.push(memberId);
         }
     });
-    
+
     // Check for ties
     if (winners.length > 1) {
         showTieBreaker(winners);
@@ -669,31 +764,31 @@ function calculateResults() {
 function showTieBreaker(tiedMembers) {
     playSound('error');
     transitionTo('tie-screen');
-    
+
     const container = document.getElementById('tie-options-container');
     container.innerHTML = '';
-    
+
     tiedMembers.forEach(memberId => {
         const member = MEMBERS[memberId];
         const btn = document.createElement('button');
         btn.className = 'tie-card-btn';
-        
+
         // Random avatar placeholder icon based on ID to make cards look unique
         const avatars = ['🔮', '🛡️', '⚡', '🌙', '🌟', '🍀', '💎', '🔥', '🐾', '🎀'];
         const avatarIdx = parseInt(memberId.replace('S', '')) % avatars.length;
-        
+
         btn.innerHTML = `
             <span class="tie-card-id">${member.id}</span>
             <span class="placeholder-icon">${avatars[avatarIdx]}</span>
             <span class="glow-text">${member.name.toUpperCase()}</span>
         `;
-        
+
         btn.addEventListener('mouseenter', () => playSound('hover'));
         btn.addEventListener('click', () => {
             playSound('success');
             showFinalResult(memberId);
         });
-        
+
         container.appendChild(btn);
     });
 }
@@ -701,12 +796,12 @@ function showTieBreaker(tiedMembers) {
 function showFinalResult(winnerId) {
     const member = MEMBERS[winnerId];
     playSound('success');
-    
+
     // Update Result UI Elements
     document.getElementById('result-name').innerText = member.name.toUpperCase();
     document.getElementById('result-id').innerText = member.id;
     document.getElementById('result-details-text').innerText = member.desc;
-    
+
     // Clear and display icon/details in frame
     const frameIcon = document.querySelector('.profile-image-placeholder .placeholder-icon');
     const frameText = document.querySelector('.profile-image-placeholder .placeholder-text');
@@ -714,17 +809,56 @@ function showFinalResult(winnerId) {
     const avatarIdx = parseInt(winnerId.replace('S', '')) % avatars.length;
     frameIcon.innerText = avatars[avatarIdx];
     frameText.innerText = `${member.id} PROFILE SYNCED`;
-    
+
     transitionTo('result-screen');
 }
 
 // ==========================================
-// 8. INTERACTIVE BINDINGS AND INIT
+// 8. DIMENSIONAL GLITCH CONTROLLER
+// ==========================================
+function triggerRandomGlitch() {
+    const delay = Math.random() * 4000 + 3000;
+
+    setTimeout(() => {
+        if (state.shaderQuality === 'low' || !gl) {
+            triggerRandomGlitch();
+            return;
+        }
+
+        const duration = Math.random() * 250 + 100;
+        const start = Date.now();
+
+        const container = document.getElementById('game-container');
+        if (container) {
+            container.classList.add('glitch-effect');
+        }
+
+        const glitchInterval = setInterval(() => {
+            const elapsed = Date.now() - start;
+            if (elapsed >= duration) {
+                clearInterval(glitchInterval);
+                state.glitchAmount = 0.0;
+                if (container) {
+                    container.classList.remove('glitch-effect');
+                }
+                triggerRandomGlitch();
+            } else {
+                state.glitchAmount = (1.0 - (elapsed / duration)) * 0.75;
+            }
+        }, 16);
+    }, delay);
+}
+
+// ==========================================
+// 9. INTERACTIVE BINDINGS AND INIT
 // ==========================================
 document.addEventListener('DOMContentLoaded', () => {
     // WebGL Init
     initWebGL();
-    
+
+    // Start portal glitches
+    triggerRandomGlitch();
+
     // Keyboard listener to skip dialogue with spacebar
     window.addEventListener('keydown', (e) => {
         if (e.code === 'Space') {
@@ -734,7 +868,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
     });
-    
+
     // Screen click listener for dialogue advance
     document.getElementById('intro-screen').addEventListener('click', () => {
         advanceIntro();
@@ -748,17 +882,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Settings Modal controls
     const modal = document.getElementById('settings-modal');
-    
+
     document.getElementById('settings-btn').addEventListener('click', () => {
         playSound('select');
         modal.classList.add('active');
     });
-    
+
     document.getElementById('close-settings-btn').addEventListener('click', () => {
         playSound('select');
         modal.classList.remove('active');
     });
-    
+
     // Sound Toggle
     const soundToggle = document.getElementById('sound-toggle');
     soundToggle.addEventListener('click', () => {
@@ -772,19 +906,19 @@ document.addEventListener('DOMContentLoaded', () => {
             soundToggle.innerText = 'OFF';
         }
     });
-    
+
     // Shader Quality selection
     const qualitySelect = document.getElementById('shader-quality');
     qualitySelect.addEventListener('change', (e) => {
         state.shaderQuality = e.target.value;
         playSound('select');
-        
+
         // Stop current animation loop if quality changes to Low
         if (animationFrameId) {
             cancelAnimationFrame(animationFrameId);
             animationFrameId = null;
         }
-        
+
         // Re-init canvas sizes & loops
         resizeCanvas();
         if (state.shaderQuality !== 'low') {
@@ -797,7 +931,7 @@ document.addEventListener('DOMContentLoaded', () => {
         playSound('error');
         alert("¡Conexión del portal finalizada!");
     });
-    
+
     document.getElementById('finish-btn').addEventListener('click', () => {
         playSound('error');
         alert("¡Portal cerrado con éxito! Tu viaje dimensional ha quedado registrado.");

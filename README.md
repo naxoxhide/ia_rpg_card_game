@@ -40,14 +40,21 @@ The game combines RPG progression mechanics with card collection elements:
 ## 🤖 AI Co-Piloted Agent Development
 This project is built using advanced agentic pair-programming workflows, co-created by the user alongside **Antigravity IDE** (developed by Google DeepMind) and **Claude**. 
 
-The repository contains specialized **Agent Customization Skills** designed to enhance the AI's autonomous capability to understand, plan, and write game features directly in the codebase:
+The repository integrates specialized tools, documentation workflows, and skills designed to enhance the AI's autonomous capability to understand, plan, and audit game features:
+
+### 🌐 Context7 Model Context Protocol (MCP)
+The project utilizes **Context7** via the Model Context Protocol (MCP) to dynamically resolve library IDs and query documentation in real-time. This ensures that the agents always construct features using the latest standards and specifications (such as WebGL GLSL constraints, Web Audio contexts, and pixel-art rendering).
+
+### 📋 Workflows and Commands (`commands/`)
+Local workflow instructions are stored in the [commands/](file:///Users/ignaciorojas/Documents/repos/ia_rpg_card_game/commands/) directory to guide agents and developers during development:
+- **[`code-quality.md`](file:///Users/ignaciorojas/Documents/repos/ia_rpg_card_game/commands/code-quality.md)**: Establishes the step-by-step auditing procedure to evaluate code styling, shader validation, and audio resilience using Context7 query tools.
 
 ### Integrated Agent Skills (`.agents/skills/`)
 1. **[`game-engine`](file:///.agents/skills/game-engine/SKILL.md)**: Exposes advanced reference documentation, algorithms (noise, collisions, math), and baseline templates for HTML5 Canvas and raw WebGL rendering loops.
 2. **[`game-development`](file:///.agents/skills/game-development/SKILL.md)**: Coordinates gaming frameworks, design principles, multiplayer systems, audio synthesis, and sub-genre guidelines (2D, 3D, mobile, and web).
 3. **[`game-ui-design`](file:///.agents/skills/game-ui-design/SKILL.md)**: Governs visual interface standards, controller bindings, layout layouts (HUDs), diegetic components, and esports readability rules.
 
-These skills are checked by the agent at runtime to align with the workspace's architecture.
+These configurations are utilized by the agent at runtime to align with the workspace's architecture.
 
 ---
 

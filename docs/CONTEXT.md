@@ -44,3 +44,5 @@ This file is a living ledger of the development history, architecture, and curre
     - Initialized Context7 documentation integration via `npx ctx7 setup`.
     - Authenticated via device OAuth flow.
     - Configured Context7 MCP server and rules for Antigravity, Claude Code, Cursor, OpenCode, Codex, and Gemini CLI.
+  - Documentation Sync (July 2026):
+    - Updated `README.md` to document the newly established Context7 Model Context Protocol (MCP) integrations and the local workflow guidelines under `commands/`.

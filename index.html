@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <!-- Retro CRT TV Effect Overlay -->
     <div class="crt-overlay"></div>
@@ -20,22 +22,22 @@
 
     <!-- Main Game Container -->
     <div id="game-container">
-        
+
         <!-- ================= START MENU SCREEN ================= -->
         <div id="menu-screen" class="screen active">
             <div class="game-header">
                 <h1 class="glow-text title-glitch">tripleS</h1>
-                <h2 class="subtitle">DIMENSION PORTAL</h2>
+                <h2 class="subtitle">INTO THE DIMENSION</h2>
             </div>
-            
+
             <div class="menu-options">
-                <button class="menu-btn" id="start-btn" data-sound="select">INICIAR PORTAL</button>
+                <button class="menu-btn" id="start-btn" data-sound="select">INICIAR</button>
                 <button class="menu-btn" id="settings-btn" data-sound="hover">CONFIGURACIÓN</button>
                 <button class="menu-btn" id="exit-btn" data-sound="error">SALIR</button>
             </div>
 
             <div class="menu-footer">
-                <p>COSMIC ENCOUNTER ENGINE v1.0.0</p>
+                <p>COSMO: THE GATE ENGINE v0.0.1</p>
             </div>
         </div>
 
@@ -67,10 +69,11 @@
                 <div class="options-sidebar" id="options-container">
                     <!-- Options will be injected here dynamically -->
                 </div>
-                
+
                 <div class="question-box">
                     <div class="question-number" id="question-num">PREGUNTA 1/10</div>
-                    <p class="question-text" id="question-text">¿Cuál es tu trasfondo antes de unirte a esta gran aventura?</p>
+                    <p class="question-text" id="question-text">¿Cuál es tu trasfondo antes de unirte a esta gran
+                        aventura?</p>
                 </div>
             </div>
         </div>
@@ -79,10 +82,11 @@
         <div id="tie-screen" class="screen">
             <div class="tie-header">
                 <h2 class="glow-text text-danger">COLISIÓN DIMENSIONAL</h2>
-                <p class="pixel-text text-center">¡El portal ha entrado en un estado de superposición cuántica!</p>
-                <p class="tie-subtitle" id="tie-message">Bueno! Creo que las dimensiones colidan, debes elegir con quien seguir:</p>
+                <p class="pixel-text text-center">¡El portal ha entrado en un estado de superposición de como!</p>
+                <p class="tie-subtitle" id="tie-message">Bueno! Creo que las dimensiones colidan, debes elegir con quien
+                    seguir:</p>
             </div>
-            
+
             <div class="tie-grid" id="tie-options-container">
                 <!-- Tied options buttons will be injected here -->
             </div>
@@ -102,7 +106,8 @@
                     <div class="pixel-border-inner">
                         <div class="profile-image-placeholder">
                             <div class="glitch-scanner"></div>
-                            <img id="profile-portrait" class="profile-portrait" src="" alt="Member Portrait" style="display: none;" />
+                            <img id="profile-portrait" class="profile-portrait" src="" alt="Member Portrait"
+                                style="display: none;" />
                             <div class="placeholder-icon">🤖</div>
                             <div class="placeholder-text">PIXEL ART SYNCING...</div>
                         </div>
@@ -154,4 +159,5 @@
     <!-- JS Logic -->
     <script src="game.js"></script>
 </body>
+
 </html>

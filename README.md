@@ -53,6 +53,7 @@ Local workflow instructions are stored in the [commands/](file:///Users/ignacior
 1. **[`game-engine`](file:///.agents/skills/game-engine/SKILL.md)**: Exposes advanced reference documentation, algorithms (noise, collisions, math), and baseline templates for HTML5 Canvas and raw WebGL rendering loops.
 2. **[`game-development`](file:///.agents/skills/game-development/SKILL.md)**: Coordinates gaming frameworks, design principles, multiplayer systems, audio synthesis, and sub-genre guidelines (2D, 3D, mobile, and web).
 3. **[`game-ui-design`](file:///.agents/skills/game-ui-design/SKILL.md)**: Governs visual interface standards, controller bindings, layout layouts (HUDs), diegetic components, and esports readability rules.
+4. **[`modern-javascript-patterns`](file:///.agents/skills/modern-javascript-patterns/SKILL.md)**: Provides a set of best practices and reference guidelines for ES6+ modern JavaScript coding paradigms.
 
 These configurations are utilized by the agent at runtime to align with the workspace's architecture.
 

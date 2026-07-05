@@ -50,5 +50,5 @@ This file is a living ledger of the development history, architecture, and curre
     - Fixed CSS height collapse bug on `.profile-card` by explicitly setting `height: 100%` and `box-sizing: border-box` to nested `.pixel-border-outer` and `.pixel-border-inner` containers.
     - Verified native image loading and rendering inside the card without layout collapsing on the results screen.
     - Replaced the repository's `assets/screenshots/final_result.png` with the verified portrait-rendered screenshot to update the README preview.
-
-
+  - Agent Skills Integration (July 2026):
+    - Added the `modern-javascript-patterns` skill from `https://github.com/wshobson/agents` inside the `.agents/skills/` directory to enhance JavaScript style guides and optimization directives.

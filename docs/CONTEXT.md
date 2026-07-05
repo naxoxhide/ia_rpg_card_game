@@ -46,3 +46,7 @@ This file is a living ledger of the development history, architecture, and curre
     - Configured Context7 MCP server and rules for Antigravity, Claude Code, Cursor, OpenCode, Codex, and Gemini CLI.
   - Documentation Sync (July 2026):
     - Updated `README.md` to document the newly established Context7 Model Context Protocol (MCP) integrations and the local workflow guidelines under `commands/`.
+  - Profile Card Layout Fix (July 2026):
+    - Fixed CSS height collapse bug on `.profile-card` by explicitly setting `height: 100%` and `box-sizing: border-box` to nested `.pixel-border-outer` and `.pixel-border-inner` containers.
+    - Verified native image loading and rendering inside the card without layout collapsing on the results screen.
+

@@ -49,4 +49,6 @@ This file is a living ledger of the development history, architecture, and curre
   - Profile Card Layout Fix (July 2026):
     - Fixed CSS height collapse bug on `.profile-card` by explicitly setting `height: 100%` and `box-sizing: border-box` to nested `.pixel-border-outer` and `.pixel-border-inner` containers.
     - Verified native image loading and rendering inside the card without layout collapsing on the results screen.
+    - Replaced the repository's `assets/screenshots/final_result.png` with the verified portrait-rendered screenshot to update the README preview.
+
 

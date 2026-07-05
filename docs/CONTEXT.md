@@ -29,5 +29,10 @@ This file is a living ledger of the development history, architecture, and curre
   - S24 Integration & Questionnaire Update (July 2026):
     - Added the newly revealed member JiYeon (S24) to the core member database (`MEMBERS`).
     - Expanded the onboarding questionnaire from 10 to 12 questions based on updated character lore mappings.
-    - Updated `loadQuestion()` in `game.js` to support 5 options (Option E) dynamically, mapping answers to JiYeon (S24) scores.
     - Verified options rendering and selection logic yielding S24 results on successful completion.
+  - Member Portrait Integration (July 2026):
+    - Integrated pixel art portrait capability inside the results profile card using an absolute positioned `<img>` element.
+    - Configured pixelated image rendering styling (`image-rendering: pixelated`) in CSS to maintain retro sharpness.
+    - Set the overlay scanner line `z-index` to sweep over the rendered portrait.
+    - Associated NaKyoung (S7) member profile with `assets/portraits/NaKyoung.png`.
+    - Executed temporary testing loop mapping NaKyoung's portrait to all members to verify card dimensioning, then restored default placeholder fallbacks.

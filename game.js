@@ -10,7 +10,7 @@ const MEMBERS = {
     'S4': { name: 'Chaeyeon', id: 'S4', desc: 'Ex-actriz infantil y estrella de televisión. Su experiencia profesional brilla tanto en el escenario como en la batalla.' },
     'S5': { name: 'Yooyeon', id: 'S5', desc: 'La reina visual inteligente. Combina su intelecto lógico con una presencia escénica arrolladora.' },
     'S6': { name: 'Soomin', id: 'S6', desc: 'Una fuerza alegre e impredecible. Aporta risas y un carisma caótico a todo el equipo.' },
-    'S7': { name: 'Nakyoung', id: 'S7', desc: 'La bailarina principal con reflejos felinos y genes musicales extraordinarios. Hermana de la solista BIBI.' },
+    'S7': { name: 'Nakyoung', id: 'S7', desc: 'La bailarina principal con reflejos felinos y genes musicales extraordinarios. Hermana de la solista BIBI.', img: 'assets/portraits/NaKyoung.png' },
     'S8': { name: 'Yubin', id: 'S8', desc: 'Recarga energía con su comida favorita. Aporta una vibra activa y competitiva que fortalece al grupo.' },
     'S9': { name: 'Kaede', id: 'S9', desc: 'Una tierna y adorable integrante japonesa con reflejos rápidos e impactante talento visual.' },
     'S10': { name: 'Dahyun', id: 'S10', desc: 'La vocalista de las notas altas imposibles. Su voz resuena como una bendición a través de los mundos.' },
@@ -805,10 +805,23 @@ function showFinalResult(winnerId) {
     // Clear and display icon/details in frame
     const frameIcon = document.querySelector('.profile-image-placeholder .placeholder-icon');
     const frameText = document.querySelector('.profile-image-placeholder .placeholder-text');
+    const imgEl = document.getElementById('profile-portrait');
+    
     const avatars = ['🔮', '🛡️', '⚡', '🌙', '🌟', '🍀', '💎', '🔥', '🐾', '🎀'];
     const avatarIdx = parseInt(winnerId.replace('S', '')) % avatars.length;
     frameIcon.innerText = avatars[avatarIdx];
     frameText.innerText = `${member.id} PROFILE SYNCED`;
+
+    if (member.img) {
+        imgEl.src = member.img;
+        imgEl.style.display = 'block';
+        frameIcon.style.display = 'none';
+        frameText.style.display = 'none';
+    } else {
+        imgEl.style.display = 'none';
+        frameIcon.style.display = 'block';
+        frameText.style.display = 'block';
+    }
 
     transitionTo('result-screen');
 }
